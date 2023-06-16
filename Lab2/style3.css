@@ -1,0 +1,232 @@
+
+body{
+    display:flex;
+    background-color: #dddada;
+    background-size: auto;
+   
+}
+button{
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    text-align: center;
+    width:100px;
+    height:30px;
+    outline: none;
+    border-color: #919df78a;
+    border-radius: 40px;
+    margin: 15px;
+    background-color: #b4b4b4;
+    cursor: pointer; 
+}
+button:hover{
+    background-color:#919df78a;
+}
+
+button:active{
+    background-color: #919df7;
+    
+}
+.button_1{
+    top:15%;
+    left:10%;
+    position: absolute;
+    z-index: 2;
+}
+.button_1 h3{
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 70px;
+    padding-left: 75%;
+    display: flex;
+}
+
+.button_1 p{
+    color:rgb(0, 0, 0);
+    font-weight: 800;
+    font-family: 'IBM Plex Mono', monospace;
+    display: flex;
+}
+.button_2 h3{
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 70px;
+    padding-left: 67%;
+    display: flex;
+   
+}
+.button_2{
+    top:40%;
+    left:10%;
+    position: absolute;
+    z-index: 2;   
+}
+.button_2 p{
+    color:rgb(0, 0, 0);
+    font-weight: 800;
+    font-family: 'IBM Plex Mono', monospace;
+    display: flex;
+}
+.button_3 h3{
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 70px;
+    padding-left: 67%;
+    display: flex;
+}
+.button_3{
+    top:65%;
+    left:10%;
+    position: absolute;
+    z-index: 2;   
+}
+.button_3 p{
+    color:rgb(0, 0, 0);
+    font-weight: 800;
+    font-family: 'IBM Plex Mono', monospace;
+    display: flex;
+}
+
+
+
+/* Used this for help with the animation for drop down menu: 
+   https://codepen.io/erikterwan/pen/EVzeRP*/
+
+#hamburger_menu{
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 40px;
+    z-index: 1;
+    user-select: none;
+}
+
+#hamburger_menu a{
+    text-decoration: none;
+    color:rgb(37, 37, 37);
+    transition: color 0.3s ease;
+}
+
+#hamburger_menu input{
+    display: block;
+    width:40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    
+}
+
+#hamburger_menu span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #353232;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    0.2s cubic-bezier(0.77,0.2,0.05,1.0), 
+    opacity 0.45s ease;
+}
+
+#hamburger_menu span:first-child{
+    transform-origin: 0% 0%;
+}
+
+#hamburger_menu span:nth-last-child(2){
+    transform-origin: 0% 100%;
+}
+
+#hamburger_menu input:checked ~ span{
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px,-1px);
+    background: rgb(37, 37, 37); 
+}
+
+#hamburger_menu input:checked ~ span:nth-last-child(3){
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2,0.2);
+}
+
+#hamburger_menu input:checked ~ span:nth-last-child(2){
+    transform: rotate(-45deg) translate(0px,-1px);
+}
+
+#home{
+    font-family: 'IBM Plex Mono', monospace;
+    position: absolute;
+    width: 175px;
+    margin: -100px 0 0 -50px;
+    padding: 35px;
+    padding-top: 125px;
+    background: #919df78a;
+    list-style-type: none;
+    transform: translate(-100%,0);
+    transform-origin: 0% 0%;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#hamburger_menu a:hover{
+    color:red
+}
+
+#home li{
+    padding: 10px 0;
+    font-size: 15px;
+}
+
+#hamburger_menu input:checked ~ ul{
+    transform: none;
+}
+
+.Message_box {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 20px;
+}
+input[type=text],select,textarea{
+
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize:none;
+}
+input[type=submit] {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    width:100px;
+    height:30px;
+    outline: none;
+    border-color: #ff000063;
+    border-radius: 40px;
+    margin: 15px;
+    background-color: #b6b6b6;
+    cursor: pointer; 
+}
+input[type=submit]:hover {
+    color:white;
+    background-color: #ff000063;
+    width:100px;
+    height:30px;
+}
+
+.contact_links{
+    display: grid;
+    position: absolute;
+    top:45%;
+    left: 15%;
+}
+.contact_links a{
+    padding-bottom: 40px;
+}
+
+
+
+

@@ -1,0 +1,194 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+/* Used to stop scrolling https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_hide_scrollbars2 */
+body{ 
+    background-color: #d1d1d1;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+/*Used to help animate about me sections:
+    https://www.youtube.com/watch?v=m0o0QNpY9-0
+    https://www.youtube.com/watch?v=uR494Vc7hf0
+*/
+main{
+    border-left-width: 0px;
+    margin-top: 200px;
+    margin-left: 175px;
+    background-color: #d1d1d1;
+    color:rgb(22, 22, 22);
+}
+    
+#description{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 34px;
+    font-weight: 500;
+    min-width: 200px;   
+}
+#description span{
+    position: relative;
+}
+#description span::before{
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 37px;
+    margin-left: 10px;
+    content: "Programer";
+    color:red;
+    animation: words 20s infinite;
+}
+#description span::after{
+    content: " ";
+    background-color:#d1d1d1;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left:2px solid red;
+    right: -8px;
+    animation: cursor .6s infinite,typing 20s steps(24) infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 2px solid #d1d1d1;
+    }
+}
+
+@keyframes words{
+    0%,20%{
+        content: "Programmer";
+    }
+    21%,40%{
+        content: "CyberSecurity Analyst";
+    }
+    41%,60%{
+        content: "Robotics Enthusiast";
+    }
+    61%,80%{
+        content: "Mathematician";
+    }
+    81%,100%{
+        content: "Masters Student";
+    }
+}
+@keyframes typing{
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width:0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width:calc(100% + 8px)
+    }
+}
+
+/* Used this for help with the animation for drop down menu: 
+   https://codepen.io/erikterwan/pen/EVzeRP*/
+
+#hamburger_menu{
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    user-select: none;
+}
+
+#hamburger_menu a{
+    text-decoration: none;
+    color:rgb(37, 37, 37);
+    transition: color 0.3s ease;
+}
+
+#hamburger_menu input{
+    display: block;
+    width:40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    
+}
+
+#hamburger_menu span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #686767;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    0.2s cubic-bezier(0.77,0.2,0.05,1.0), 
+    opacity 0.45s ease;
+}
+
+#hamburger_menu span:first-child{
+    transform-origin: 0% 0%;
+}
+
+#hamburger_menu span:nth-last-child(2){
+    transform-origin: 0% 100%;
+}
+
+#hamburger_menu input:checked ~ span{
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px,-1px);
+    background: rgb(37, 37, 37); 
+}
+
+#hamburger_menu input:checked ~ span:nth-last-child(3){
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2,0.2);
+}
+
+#hamburger_menu input:checked ~ span:nth-last-child(2){
+    transform: rotate(-45deg) translate(0px,-1px);
+}
+
+#home{
+    font-family: 'IBM Plex Mono', monospace;
+    position: absolute;
+    width: 175px;
+    margin: -100px 0 0 -50px;
+    padding: 35px;
+    padding-top: 125px;
+    background: #919df78a;
+    list-style-type: none;
+    transform: translate(-100%,0);
+    transform-origin: 0% 0%;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#hamburger_menu a:hover{
+    color:red
+}
+
+#home li{
+    padding: 10px 0;
+    font-size: 15px;
+}
+
+#hamburger_menu input:checked ~ ul{
+    transform: none;
+}
+
+footer{
+    display:block;
+    opacity: 0.35;
+    margin-top: 150px;
+    margin-left: 1425px;
+}
+
+
+
+
+
+
+
+
