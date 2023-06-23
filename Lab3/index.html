@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <title>Calculator</title>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&&family=Poppins:wght@400&family=Reenie+Beanie&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/mathjs@11.8.2/lib/browser/math.js"></script>
+    </head>
+    <body>
+       
+            <div class="math_machine">
+                <div class="screen">
+                    <form>
+                        <textarea id="calc"   disabled   style="text-align:right; overflow:hidden;padding-right: 25px;">0
+                        </textarea>
+                    </form>
+                </div>
+                <div class="numpad">
+                    <table>
+                        <tr>
+                            <th><button id="button_clear" onclick="clear_result(this)">C</button></th>
+                            <th><button  value="1" onclick="user_pressed(this)">1</button></th>
+                            <th><button  value="2" onclick="user_pressed(this)">2</button></th>
+                        </tr>
+                        <tr>
+                            <th><button  value="3" onclick="user_pressed(this)">3</button></th>
+                            <th><button  value="4" onclick="user_pressed(this)">4</button></th>
+                            <th><button  value="5" onclick="user_pressed(this)">5</button></th>                     
+                        </tr>
+                        <tr>
+                            <th><button  value="6" onclick="user_pressed(this)">6</button></th>
+                            <th><button  value="7" onclick="user_pressed(this)">7</button></th>
+                            <th><button  value="8" onclick="user_pressed(this)">8</button></th>
+                        </tr>
+                        <tr>
+                            <th><button  value="0" onclick="user_pressed(this)">0</button></th>
+                            <th><button  value="9" onclick="user_pressed(this)">9</button></th>
+                            <th><button  value="." onclick="user_pressed(this)">.</button></th>    
+                        </tr>
+                        <tr>
+                            <th><button id="button_equal" onclick="calc_result(this)">=</button></th> 
+                        </tr>
+                        <script src="script.js" async defer></script>
+                    </table>
+                    <div class="operations">
+                        <table>
+                            <!--<tr>
+                                <th><button id="sin" onclick="">sin</button></th>
+                                <th><button id="cos" onclick="">cos</button></th>
+                                <th><button id="tan" onclick="">tan</button></th>
+                            </tr>-->
+                            <tr>
+                                <th><button id="button_op" value="sin(" onclick="user_pressed(this)">sin</button></th>
+                                <th><button id="button_op" value="cos(" onclick="user_pressed(this)">cos</button></th>
+                            </tr>
+                            <tr>
+                                <th><button id="button_op" value="tan(" onclick="user_pressed(this)">tan</button></th>
+                                <th><button id="button_op" value="sqrt(" onclick="user_pressed(this)">√</button></th>
+                            </tr>
+                            <tr>
+                                <th><button id="button_op" value="+" onclick="user_pressed(this)" >+</button></th>
+                                <th><button id="button_op" value="-" onclick="user_pressed(this)">-</button></th>
+                                
+                            </tr>
+                            <tr>
+                                <th><button id="button_op" value="/" onclick="user_pressed(this)">/</button></th>
+                                <th><button id="button_op" value="*" onclick="user_pressed(this)">*</button></th>
+                            </tr>
+                            <tr>
+                                <th><button id="button_op" value="(" onclick="user_pressed(this)">(</button></th>
+                                <th><button id="button_op" value=")" onclick="user_pressed(this)">)</button></th>
+                            </tr>
+                                                
+                        </table>
+            
+                    </div>
+                </div>
+            </div>
+            
+    </body>
+</html>
