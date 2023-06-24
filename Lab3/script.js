@@ -23,7 +23,7 @@ function user_pressed(btn){
     let val=btn.value;
     user_input.push(val);
     //Check to ensure that first value is not an operation
-    if(user_input[0]==op[0] || user_input[0]==op[1] || user_input[0]==op[2] || user_input[0]==op[3] || user_input[0]==op[5] || user_input[0]==op[6] || user_input[0]==op[10] ){
+    if(user_input[0]==op[0] || user_input[0]==op[1] || user_input[0]==op[2] || user_input[0]==op[3] || user_input[0]==op[6] || user_input[0]==op[10] ){
         user_input.pop()
     }
     //Check to make sure that there is not two operations back to back like ++ 
