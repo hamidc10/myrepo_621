@@ -19,7 +19,7 @@ for i in range(0,len(challenges)):
     problems=challenges[i]
     for j in problems.values():
         arr.append(j)
-    length_arr=len(arr)
+   
     
     #Tried test case to ensure that it did check for ?
     # arr.append(4)
