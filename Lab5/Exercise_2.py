@@ -41,17 +41,12 @@ for i in prob_quest:
     i=i.replace("?","")
     count+=1
     solve=eval(i) 
-    solved.append("The answer to problem " + str(count) + " = " + str(solve) )
-print(solved)
+    answer="The answer to problem " + str(count) + " = " + str(solve)
+    solved.append(answer) # dont need to really append it now since I have changed to printing it but incase need for future 
+    print(answer)
     
-#Used eval() to help solve the problems
-# https://realpython.com/python-eval-function/#:~:text=Python's%20eval()%20allows%20you,or%20a%20compiled%20code%20object.
-# count=0
-# for i in prob_quest:
-#     i=i.replace("?","")
-#     count+=1
-#     solve=eval(i) 
-#     solved.append(solve)
+#print(solved)
+
    
 
           
@@ -62,6 +57,12 @@ print(solved)
 
 
 #### Test cases and random code used to help solve #### 
+# count=0
+# for i in prob_quest:
+#     i=i.replace("?","")
+#     count+=1
+#     solve=eval(i) 
+#     solved.append(solve)
 
 #This allows me to loop through the question arr and remove the ?
 # for i in list(prob_question):
