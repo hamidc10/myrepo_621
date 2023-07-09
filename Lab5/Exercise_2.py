@@ -36,15 +36,28 @@ for i in range(0,length_arr):
 
 #Used eval() to help solve the problems
 # https://realpython.com/python-eval-function/#:~:text=Python's%20eval()%20allows%20you,or%20a%20compiled%20code%20object.
+# Used for bonus point
+# https://www.w3schools.com/python/python_json.asp
+# https://www.w3schools.com/python/ref_requests_post.asp
 count=0
+answer=[]
 for i in prob_quest:
     i=i.replace("?","")
     count+=1
     solve=eval(i) 
-    answer="The answer to problem " + str(count) + " = " + str(solve)
-    solved.append(answer) # dont need to really append it now since I have changed to printing it but incase need for future 
-    print(answer)
-    
+    #answer="The answer to problem " + str(count) + " = " + str(solve)
+    #solved.append(answer) # dont need to really append it now since I have changed to printing it but incase need for future 
+    answer_info={"id":count,"answer":solve}
+    answer.append(answer_info)
+r = requests.post( url, json=answer)
+
+
+#print(r.json())
+#print(r.__dict__)
+print(answer)
+print(r.text)
+
+
 #print(solved)
 
    
