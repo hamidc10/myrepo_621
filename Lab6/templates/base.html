@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- For style sheet https://pythonhow.com/python-tutorial/flask/Adding-CSS-styling-to-your-website/ -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="{{url_for('static',filename='styles/style.css')}}">
+        <title>Home Page</title>
+        
+    </head>
+    <nav role="options">
+        <div id="hamburger_menu">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="home">
+                <li><a class="Home Page" href="{{url_for('index')}}">Home Page</a></li>
+            </ul>
+        </div>
+    </nav> 
+    
+    {% block content %}
+
+    {% endblock %}
+    <body>
+    </body>
+</html>

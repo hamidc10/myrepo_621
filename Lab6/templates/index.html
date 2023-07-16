@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- For style sheet https://pythonhow.com/python-tutorial/flask/Adding-CSS-styling-to-your-website/ -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Main Page</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='styles/style.css')}}">
+    </head>
+   
+    <body>
+        
+        
+        {% block content %}
+        <!-- Will add the extra info here -->
+        <div id="jumbotron">
+        <p>Welcome lets check your Password</p>
+        <li>Must contain a lowercase letter</li>
+        <li>Must contain a Uppercase letter</li>
+        <li>Must end with a number</li>
+        <li>Must contain at least 8 characters</li>
+            <form action="{{url_for('report')}}" >
+              <label for="username">Username</label>
+              <input type="text" name="username" >
+              <label for="password">Password</label>
+              <input type="text" name="password" >
+              <input type="submit" value="Submit" >
+            </form>
+        </div>
+        {% endblock %}
+   
+    </body>
+</html>

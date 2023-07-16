@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- For style sheet https://pythonhow.com/python-tutorial/flask/Adding-CSS-styling-to-your-website/ -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Result Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{url_for('static',filename='styles/style.css')}}">
+    </head>
+    <body>
+        {% extends "base.html"%}
+        {% block content %}
+        <div id="Results">
+            <h1> Congrats on making a Password</h1>
+            <h2> Lets check to see if your password meets our criteria</h2>
+            <li class={{password0}}> Your password meets all the criteria Thanks for the password!!</li>
+            <li class={{password}}>Your password does not contain a lower case characters</li>
+            <li class={{password2}}>Your password does not contain a upper case characters</li>
+            <li class={{password3}}>Your password does not contain a number at the end</li>
+            <li class={{password4}}>Your password is not at least 8 characters</li>
+        </div>
+        {% endblock %}
+    </body>
+</html>
